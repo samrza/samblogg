@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>samblogg - Travel</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .timeline {
+        position: relative;
+        max-width: 800px;
+        margin: 40px auto;
+      }
+      .timeline::after {
+        content: "";
+        position: absolute;
+        width: 2px;
+        background-color: #333;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -1px;
+      }
+      .timeline-item {
+        padding: 10px 40px;
+        position: relative;
+        width: 50%;
+        box-sizing: border-box;
+      }
+      .timeline-item:nth-child(odd) {
+        left: 0;
+      }
+      .timeline-item:nth-child(even) {
+        left: 50%;
+      }
+      .timeline-item::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: #1d4ed8;
+        border-radius: 50%;
+        top: 15px;
+        right: -10px;
+        z-index: 1;
+      }
+      .timeline-item:nth-child(even)::after {
+        left: -10px;
+      }
+      .timeline-content {
+        padding: 20px;
+        background-color: #f8f9fa;
+        border-radius: 6px;
+      }
+      .timeline-date {
+        color: #1d4ed8;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <a href="index.html" class="logo">samblogg</a>
+        <nav>
+          <ul>
+            <li><a href="now.html">Now</a></li>
+            <li><a href="journal.html">Journal</a></li>
+            <li><a href="travel.html">Travel</a></li>
+            <li><a href="writings.html">Writings</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="questions.html">Questions</a></li>
+
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="container">
+      <main>
+        <h1>Travel</h1>
+        <p>Places I've been and memories I've made.</p>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-date">March 2024</div>
+              <h3>Kyoto, Japan</h3>
+              <p>
+                Explored ancient temples and traditional gardens. The Fushimi
+                Inari shrine at sunrise was magical. Learned about tea
+                ceremonies and tried my hand at calligraphy.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-date">December 2023</div>
+              <h3>Barcelona, Spain</h3>
+              <p>
+                Wandered through Gaudi's architectural masterpieces. The Sagrada
+                Familia was even more impressive in person. Enjoyed tapas and
+                learned about Catalan culture.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-date">August 2023</div>
+              <h3>Banff, Canada</h3>
+              <p>
+                Hiked through the Canadian Rockies. The turquoise lakes and
+                snow-capped peaks were breathtaking. Spent evenings stargazing
+                and learning about local wildlife.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <div class="timeline-date">May 2023</div>
+              <h3>Bali, Indonesia</h3>
+              <p>
+                Experienced the perfect blend of culture and nature. Learned to
+                surf in Canggu, explored Ubud's rice terraces, and participated
+                in a traditional ceremony.
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <p>&copy; 2025 Sam</p>
+      <ul>
+        <li>
+          <a href="https://instagram.com/samrza_" target="_blank"
+            >Instagram</a
+          >
+        </li>
+        <li>
+          <a href="https://x.com/samrza_" target="_blank">X.com</a>
+        </li>
+        <li>
+          <a href="https://github.com/samrza" target="_blank">GitHub</a>
+        </li>
+      </ul>
+      </footer>
+    </div>
+  </body>
+</html>
