@@ -136,7 +136,7 @@ footer a:hover {
 }
 
 .hero-image img {
-  max-width: 400px;
+  max-width: 300px;
   width: 100%;
   height: auto;
   border-radius: 8px;
@@ -146,4 +146,152 @@ footer a:hover {
 
 .hero-image img:hover {
   transform: scale(1.02);
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+  .hero-image img {
+    max-width: 100px;
+    margin: 0 auto;
+  }
+
+  body {
+    padding: 1.5rem 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-image img {
+    max-width: 100px;
+  }
+
+  body {
+    padding: 1rem 0.75rem;
+  }
+}
+
+/* Now page specific styles */
+.now-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.now-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.now-page section {
+  margin-bottom: 3rem;
+}
+
+.now-page h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.now-page p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.now-page ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.now-page ul li {
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.5;
+}
+
+.now-page ul li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #666;
+}
+
+.now-page .last-updated {
+  margin-top: 4rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+  color: #666;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .now-page {
+    padding: 1rem;
+  }
+
+  .now-page h1 {
+    font-size: 2rem;
+  }
+
+  .now-page h2 {
+    font-size: 1.3rem;
+  }
+}
+
+.home-quote {
+  font-style: italic;
+  color: #444;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  text-align: center;
+  background-color: #f8f9fa;
+  border-left: 4px solid #1d4ed8;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .home-quote {
+    font-size: 1.1rem;
+    padding: 1rem;
+  }
+}
+
+.placeholder-message {
+  text-align: center;
+  margin: 4rem 0;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.placeholder-message p {
+  font-size: 1.2rem;
+  color: #4b5563;
+  margin-bottom: 0.5rem;
+}
+
+.placeholder-message .subtitle {
+  font-size: 1rem;
+  color: #6b7280;
+  font-style: italic;
+}
+
+@media (max-width: 480px) {
+  .placeholder-message {
+    margin: 2rem 0;
+    padding: 1.5rem;
+  }
+
+  .placeholder-message p {
+    font-size: 1.1rem;
+  }
 }

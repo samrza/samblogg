@@ -6,56 +6,126 @@
     <title>samblogg - Travel</title>
     <link rel="stylesheet" href="style.css" />
     <style>
-      .timeline {
+      .travel-timeline {
         position: relative;
         max-width: 800px;
         margin: 40px auto;
+        padding: 20px;
       }
-      .timeline::after {
+
+      .travel-timeline::before {
         content: "";
         position: absolute;
+        left: 20px;
         width: 2px;
-        background-color: #333;
-        top: 0;
-        bottom: 0;
-        left: 50%;
-        margin-left: -1px;
+        height: 100%;
+        background-color: #e5e7eb;
       }
+
       .timeline-item {
-        padding: 10px 40px;
         position: relative;
-        width: 50%;
-        box-sizing: border-box;
+        margin-bottom: 40px;
+        padding-left: 50px;
       }
-      .timeline-item:nth-child(odd) {
-        left: 0;
-      }
-      .timeline-item:nth-child(even) {
-        left: 50%;
-      }
-      .timeline-item::after {
-        content: "";
+
+      .timeline-dot {
         position: absolute;
-        width: 20px;
-        height: 20px;
+        left: 16px;
+        width: 10px;
+        height: 10px;
         background-color: #1d4ed8;
         border-radius: 50%;
-        top: 15px;
-        right: -10px;
         z-index: 1;
       }
-      .timeline-item:nth-child(even)::after {
-        left: -10px;
-      }
+
       .timeline-content {
+        background: white;
         padding: 20px;
-        background-color: #f8f9fa;
-        border-radius: 6px;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
       }
+
       .timeline-date {
         color: #1d4ed8;
-        font-weight: bold;
-        margin-bottom: 10px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        margin-bottom: 4px;
+      }
+
+      .timeline-location {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #1f2937;
+        margin-bottom: 8px;
+      }
+
+      .timeline-image-container {
+        width: 100%;
+        margin-bottom: 12px;
+        border-radius: 16px;
+        overflow: hidden;
+        position: relative;
+        background: white;
+      }
+
+      .timeline-image {
+        width: 100%;
+        max-height: 300px;
+        object-fit: cover;
+        display: block;
+        border-radius: 16px;
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
+      }
+
+      .timeline-description {
+        color: #4b5563;
+        line-height: 1.6;
+        font-size: 0.95rem;
+      }
+
+      @media (max-width: 768px) {
+        .travel-timeline {
+          padding: 15px;
+        }
+
+        .timeline-item {
+          margin-bottom: 30px;
+          padding-left: 40px;
+        }
+
+        .timeline-dot {
+          left: 13px;
+          width: 8px;
+          height: 8px;
+        }
+
+        .timeline-content {
+          padding: 15px;
+        }
+
+        .timeline-date {
+          font-size: 0.85rem;
+        }
+
+        .timeline-location {
+          font-size: 1.1rem;
+        }
+
+        .timeline-image-container {
+          border-radius: 12px;
+          margin-bottom: 10px;
+        }
+
+        .timeline-image {
+          max-height: 250px;
+          border-radius: 12px;
+          object-fit: cover;
+        }
+
+        .timeline-description {
+          font-size: 0.9rem;
+        }
       }
     </style>
   </head>
@@ -68,10 +138,9 @@
             <li><a href="now.html">Now</a></li>
             <li><a href="journal.html">Journal</a></li>
             <li><a href="travel.html">Travel</a></li>
-            <li><a href="writings.html">Writings</a></li>
-            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="articles.html">Articles</a></li>
             <li><a href="questions.html">Questions</a></li>
-
+            <li><a href="achievements.html">Achievements</a></li>
           </ul>
         </nav>
       </div>
@@ -82,51 +151,87 @@
         <h1>Travel</h1>
         <p>Places I've been and memories I've made.</p>
 
-        <div class="timeline">
+        <div class="travel-timeline">
           <div class="timeline-item">
+            <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <div class="timeline-date">March 2024</div>
-              <h3>Kyoto, Japan</h3>
-              <p>
-                Explored ancient temples and traditional gardens. The Fushimi
-                Inari shrine at sunrise was magical. Learned about tea
-                ceremonies and tried my hand at calligraphy.
-              </p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-content">
-              <div class="timeline-date">December 2023</div>
-              <h3>Barcelona, Spain</h3>
-              <p>
-                Wandered through Gaudi's architectural masterpieces. The Sagrada
-                Familia was even more impressive in person. Enjoyed tapas and
-                learned about Catalan culture.
-              </p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-content">
-              <div class="timeline-date">August 2023</div>
-              <h3>Banff, Canada</h3>
-              <p>
-                Hiked through the Canadian Rockies. The turquoise lakes and
-                snow-capped peaks were breathtaking. Spent evenings stargazing
-                and learning about local wildlife.
-              </p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-content">
-              <div class="timeline-date">May 2023</div>
-              <h3>Bali, Indonesia</h3>
-              <p>
+              <div class="timeline-date">May 2025</div>
+              <h3 class="timeline-location">Dehradun, India</h3>
+              <div class="timeline-image-container">
+                <img
+                  src="images/mussorie-secret-waterfall.jpeg"
+                  alt="secret waterfall"
+                  class="timeline-image"
+                />
+              </div>
+              <p class="timeline-description">
                 Experienced the perfect blend of culture and nature. Learned to
                 surf in Canggu, explored Ubud's rice terraces, and participated
-                in a traditional ceremony.
+                in a traditional ceremony. The warm hospitality and vibrant
+                culture made it an unforgettable journey.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">May 2025</div>
+              <h3 class="timeline-location">Mussorie, India</h3>
+              <div class="timeline-image-container">
+                <img
+                  src="images/mussorie-secret-waterfall.jpeg"
+                  alt="Lake Louise"
+                  class="timeline-image"
+                />
+              </div>
+              <p class="timeline-description">
+                Hiked through the Canadian Rockies. The turquoise lakes and
+                snow-capped peaks were breathtaking. Spent evenings stargazing
+                and learning about local wildlife. The pristine nature and fresh
+                mountain air were rejuvenating.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">December 2023</div>
+              <h3 class="timeline-location">Barcelona, Spain</h3>
+              <div class="timeline-image-container">
+                <img
+                  src="images/sagrada-familia.jpg"
+                  alt="Sagrada Familia"
+                  class="timeline-image"
+                />
+              </div>
+              <p class="timeline-description">
+                Wandered through Gaudi's architectural masterpieces. The Sagrada
+                Familia was even more impressive in person. Enjoyed tapas and
+                learned about Catalan culture. The city's vibrant energy and
+                rich history made it an unforgettable experience.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">March 2024</div>
+              <h3 class="timeline-location">Kyoto, Japan</h3>
+              <div class="timeline-image-container">
+                <img
+                  src="images/fushimi-inari.jpg"
+                  alt="Fushimi Inari Shrine"
+                  class="timeline-image"
+                />
+              </div>
+              <p class="timeline-description">
+                Explored ancient temples and traditional gardens. The Fushimi
+                Inari shrine at sunrise was magical. Learned about tea
+                ceremonies and tried my hand at calligraphy. The blend of
+                traditional culture and modern life in Kyoto is truly unique.
               </p>
             </div>
           </div>
@@ -135,19 +240,17 @@
 
       <footer>
         <p>&copy; 2025 Sam</p>
-      <ul>
-        <li>
-          <a href="https://instagram.com/samrza_" target="_blank"
-            >Instagram</a
-          >
-        </li>
-        <li>
-          <a href="https://x.com/samrza_" target="_blank">X.com</a>
-        </li>
-        <li>
-          <a href="https://github.com/samrza" target="_blank">GitHub</a>
-        </li>
-      </ul>
+        <ul>
+          <li>
+            <a href="https://instagram.com/samrza_" target="_blank"
+              >Instagram</a
+            >
+          </li>
+          <li><a href="https://x.com/samrza_" target="_blank">X.com</a></li>
+          <li>
+            <a href="https://github.com/samrza" target="_blank">GitHub</a>
+          </li>
+        </ul>
       </footer>
     </div>
   </body>
