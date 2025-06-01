@@ -81,13 +81,6 @@ Sam
 - X.com: [@samrza\_](https://x.com/samrza_)
 - GitHub: [@samrza](https://github.com/samrza)
 
-## 🌟 Future Plans
-
-- [ ] Add dark mode support
-- [ ] Implement search functionality
-- [ ] Add RSS feed
-- [ ] Create an API for dynamic content
-- [ ] Add more interactive features
 
 ## 🤝 Contributing
 
